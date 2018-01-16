@@ -95,8 +95,8 @@ Done. This command should link `spaceship.zsh` as `prompt_spaceship_setup` to yo
 
 ### [oh-my-zsh]
 
-- Set `ZSH_THEME=""` in your `.zshrc`
-- Follow instructions in [manual](https://github.com/denysdovhan/spaceship-zsh-theme#manual) installation.
+* Set `ZSH_THEME=""` in your `.zshrc`
+* Follow instructions in [manual](https://github.com/denysdovhan/spaceship-zsh-theme#manual) installation.
 
 ### [antigen]
 
@@ -134,8 +134,8 @@ zplug denysdovhan/spaceship-zsh-theme, use:spaceship.zsh, from:github, as:theme
 
 If you have problems with approches above, follow these instructions:
 
-- Download the theme [here](https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/spaceship.zsh)
-- Symlink `spaceship.zsh` to somewhere in `$fpath` as `prompt_spaceship_setup`.
+* Download the theme [here](https://raw.githubusercontent.com/denysdovhan/spaceship-zsh-theme/master/spaceship.zsh)
+* Symlink `spaceship.zsh` to somewhere in `$fpath` as `prompt_spaceship_setup`.
 
 Run `echo $fpath` to see possible locations. Like,
 
@@ -149,12 +149,14 @@ For a user-specific installation (which would not require escalated privileges),
 # .zshrc
 fpath=( "$HOME/.zfunctions" $fpath )
 ```
+
 Then install the theme there:
+
 ```console
 $ ln -sf "$PWD/spaceship.zsh" "$HOME/.zfunctions/prompt_spaceship_setup"
 ```
 
-- Initialize prompt system and choose `spaceship`
+* Initialize prompt system and choose `spaceship`
 
 ```sh
 # .zshrc
@@ -166,9 +168,9 @@ prompt spaceship
 
 Hi! I work on this project in my spare time, beside my primary job. I hope enjoy using Spaceship, and if you do, please, [buy me a cup of tea ☕️][donate-card-url].
 
-| Credit/Debit card | Bitcoin | Ethereum |
-|:-----------------:|:-------:|:--------:|
-| [Donate with LiqPay][donate-card-url] | `1FrPrQb6ACTkbSBAz9PduJWrDFfq41Ggb4` | `0x6aF39C917359897ae6969Ad682C14110afe1a0a1` |
+|                                                        Credit/Debit card                                                        |                                                            Bitcoin                                                             |                                                            Ethereum                                                            |
+| :-----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+|                                              [Donate with LiqPay][donate-card-url]                                              |                                              `1FrPrQb6ACTkbSBAz9PduJWrDFfq41Ggb4`                                              |                                          `0x6aF39C917359897ae6969Ad682C14110afe1a0a1`                                          |
 | <img src="https://cloud.githubusercontent.com/assets/3459374/25771981/6f2ba08c-3268-11e7-9fc8-49e3f7b9e0e5.png" width="160px"/> | <img src="https://user-images.githubusercontent.com/3459374/33760933-1c9b81b4-dc10-11e7-8e4b-22d81f98c138.png" width="160px"/> | <img src="https://user-images.githubusercontent.com/3459374/33760932-1c7b3fb2-dc10-11e7-9774-411264d533da.png" width="160px"/> |
 
 I would appreciate your support! _Thank you!_
@@ -181,10 +183,8 @@ MIT © [Denys Dovhan](http://denysdovhan.com)
 
 [npm-url]: https://npmjs.org/package/spaceship-zsh-theme
 [npm-image]: https://img.shields.io/npm/v/spaceship-zsh-theme.svg?style=flat-square
-
 [zsh-url]: http://zsh.org/
 [zsh-image]: https://img.shields.io/badge/zsh-%3E%3Dv5.0.6-777777.svg?style=flat-square
-
 [donate-readme]: https://github.com/denysdovhan/spaceship-zsh-theme#donate
 [donate-card-url]: https://www.liqpay.com/en/checkout/380951100392
 [donate-card-image]: https://img.shields.io/badge/donate-LiqPay-blue.svg?style=flat-square

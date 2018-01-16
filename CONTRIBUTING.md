@@ -14,8 +14,8 @@ Please, keep this simple rules in mind while you're contributing to Spaceship.
 
 ## Setup
 
-1. **Fork** this repo (click the *fork* button)
-2. **Clone** your fork to your working machine (via `git clone `)
+1. **Fork** this repo (click the _fork_ button)
+2. **Clone** your fork to your working machine (via `git clone`)
 3. **Add and commit** your contributions
 4. **Push** your changes to your remote fork
 5. **Open a pull-request** to our primary repo
