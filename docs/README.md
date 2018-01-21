@@ -56,4 +56,3 @@
   * [spaceship::displaytime](/docs/API.md#spaceshipdisplaytime-seconds)
   * [spaceship::union](/docs/API.md#spaceshipunion-arr1-arr2-)
 * [Troubleshooting](/docs/Troubleshooting.md)
-
