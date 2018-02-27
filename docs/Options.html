@@ -942,7 +942,7 @@
   line_sep      <span class="hljs-comment"># Line break</span>
   battery       <span class="hljs-comment"># Battery level and status</span>
   vi_mode       <span class="hljs-comment"># Vi-mode indicator</span>
-  <span class="hljs-built_in">jobs</span>          <span class="hljs-comment"># Backgound jobs indicator</span>
+  <span class="hljs-built_in">jobs</span>          <span class="hljs-comment"># Background jobs indicator</span>
   <span class="hljs-built_in">exit</span>_code     <span class="hljs-comment"># Exit code section</span>
   char          <span class="hljs-comment"># Prompt character</span>
 )
@@ -1168,6 +1168,11 @@
 <td>Show host section (<code>true</code>, <code>false</code> or <code>always</code>)</td>
 </tr>
 <tr>
+<td style="text-align:left"><code>SPACESHIP_HOST_SHOW_FULL</code></td>
+<td style="text-align:center"><code>false</code></td>
+<td>Show full hostname section (<code>true</code>, <code>false</code>)</td>
+</tr>
+<tr>
 <td style="text-align:left"><code>SPACESHIP_HOST_PREFIX</code></td>
 <td style="text-align:center"><code>at&#xB7;</code></td>
 <td>Prefix before the connected SSH machine name</td>
@@ -1261,7 +1266,7 @@
 <tr>
 <td style="text-align:left"><code>SPACESHIP_GIT_SYMBOL</code></td>
 <td style="text-align:center"><img src="https://user-images.githubusercontent.com/3459374/34947621-4f324a92-fa13-11e7-9b99-cdba2cdda6b9.png" alt="&#xE0A0;&#xB7;"></td>
-<td>Character to be shown before Git section (requires [powerline patched font][powerline])</td>
+<td>Character to be shown before Git section (requires <a href="https://github.com/powerline/fonts" target="_blank">powerline patched font</a></td>
 </tr>
 </tbody>
 </table>
@@ -1414,6 +1419,7 @@
 </tbody>
 </table>
 <h4 id="mercurial-branch-hgbranch">Mercurial branch (<code>hg_branch</code>)</h4>
+<p>Shows Mercurial bookmarks when available, otherwise shows Mercurial branch information.</p>
 <table>
 <thead>
 <tr>
@@ -1544,7 +1550,7 @@
 </table>
 <h3 id="nodejs-node">Node.js (<code>node</code>)</h3>
 <p>Node.js section is shown only in directories that contain <code>package.json</code> file, or <code>node_modules</code> folder, or any other file with <code>.js</code> extension.</p>
-<p>If you use [n] as Node.js version manager, please, set <code>SPACESHIP_NODE_DEFAULT_VERSION</code> to the default Node.js version. If current version is the same as <code>SPACESHIP_NODE_DEFAULT_VERSION</code>, then Node.js section will be hidden.</p>
+<p>If you set <code>SPACESHIP_NODE_DEFAULT_VERSION</code> to the default Node.js version and your current version is the same as <code>SPACESHIP_NODE_DEFAULT_VERSION</code>, then Node.js section will be hidden.</p>
 <table>
 <thead>
 <tr>
@@ -1577,7 +1583,7 @@
 <tr>
 <td style="text-align:left"><code>SPACESHIP_NODE_DEFAULT_VERSION</code></td>
 <td style="text-align:center"><code> </code></td>
-<td>Node.js version to be treated as default (for [n] support)</td>
+<td>Node.js version to be treated as default</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>SPACESHIP_NODE_COLOR</code></td>
@@ -2045,6 +2051,11 @@
 <td>Suffix after the virtualenv section</td>
 </tr>
 <tr>
+<td style="text-align:left"><code>SPACESHIP_VENV_GENERIC_NAMES</code></td>
+<td style="text-align:center"><code>(virtualenv venv .venv)</code></td>
+<td>If the virtualenv folder is in this <em>array</em>, than use its parent directory as its name instead</td>
+</tr>
+<tr>
 <td style="text-align:left"><code>SPACESHIP_VENV_COLOR</code></td>
 <td style="text-align:center"><code>blue</code></td>
 <td>Color of virtualenv environment section</td>
@@ -2280,7 +2291,7 @@
 </tbody>
 </table>
 <h3 id="battery-battery">Battery (<code>battery</code>)</h3>
-<p>By default, Battery section is shown only if battery level is below <code>SPACESHIP_BATTERY_THRESHOLD</code> (default: 10%) or it&apos;s fully charged.</p>
+<p>By default, Battery section is shown only if battery level is below <code>SPACESHIP_BATTERY_THRESHOLD</code> (default: 10%).</p>
 <table>
 <thead>
 <tr>
@@ -2293,7 +2304,7 @@
 <tr>
 <td style="text-align:left"><code>SPACESHIP_BATTERY_SHOW</code></td>
 <td style="text-align:center"><code>true</code></td>
-<td>Show battery section or not (<code>true</code>, <code>false</code>, <code>always</code> or <code>low</code>)</td>
+<td>Show battery section or not (<code>true</code>, <code>false</code>, <code>always</code> or <code>charged</code>)</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>SPACESHIP_BATTERY_PREFIX</code></td>
@@ -2354,13 +2365,13 @@
 <td style="text-align:center"><code>true</code></td>
 <td style="text-align:left">Shown</td>
 <td style="text-align:left">Hidden</td>
-<td style="text-align:left">Shown</td>
+<td style="text-align:left">Hidden</td>
 </tr>
 <tr>
-<td style="text-align:center"><code>low</code></td>
+<td style="text-align:center"><code>charged</code></td>
 <td style="text-align:left">Shown</td>
 <td style="text-align:left">Hidden</td>
-<td style="text-align:left">Hidden</td>
+<td style="text-align:left">Shown</td>
 </tr>
 </tbody>
 </table>
@@ -2548,7 +2559,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-02-12T05:11:49.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-12T05:51:49.632Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-02-27T10:38:44.000Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-02-27T11:27:37.340Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2570,7 +2581,7 @@
         
     
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/3.1.1/anchor.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
         
     
         
