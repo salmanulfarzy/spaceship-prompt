@@ -1,6 +1,6 @@
 {
   "name": "spaceship-prompt",
-  "version": "3.1.0",
+  "version": "3.2.0",
   "description": "A Zsh prompt for Astronauts.",
   "files": [
     "lib",
@@ -47,5 +47,11 @@
     "gitbook-plugin-github": "^2.0.0",
     "gitbook-plugin-github-buttons": "^3.0.0",
     "gitbook-plugin-prism": "^2.3.0"
+  },
+  "dependencies": {
+    "gitbook-plugin-anchorjs": "^1.1.1",
+    "gitbook-plugin-edit-link": "^2.0.2",
+    "gitbook-plugin-github": "^2.0.0",
+    "gitbook-plugin-github-buttons": "^3.0.0"
   }
 }
