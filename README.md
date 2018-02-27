@@ -31,14 +31,14 @@ Currently it shows:
   * `⇡` — ahead of remote branch;
   * `⇣` — behind of remote branch;
   * `⇕` — diverged chages.
-* Current Mercurial branch and rich repo status:
+* Current Mercurial bookmark/branch and rich repo status:
   * `?` — untracked changes;
   * `+` — uncommitted changes in the index;
   * `!` — unstaged changes;
   * `✘` — deleted files;
 * Indicator for jobs in the background (`✦`).
 * Current Node.js version, through nvm/nodenv/n (`⬢`).
-* Current Ruby version, through rvm/rbenv/chruby (`💎`).
+* Current Ruby version, through rvm/rbenv/chruby/asdf (`💎`).
 * Current Elixir version, through kiex/exenv/elixir (`💧`).
 * Current Swift version, through swiftenv (`🐦`).
 * Current Xcode version, through xenv (`🛠`).
@@ -70,7 +70,7 @@ Want more features? Please, [open an issue](https://github.com/denysdovhan/space
 ## Preview
 
 <p align="center">
-  <img alt="Spaceship with Hyper and One Dark" src="./preview.gif" width="980px">
+  <img alt="Spaceship with Hyper and One Dark" src="https://user-images.githubusercontent.com/10276208/36086434-5de52ace-0ff2-11e8-8299-c67f9ab4e9bd.gif" width="980px">
 </p>
 
 You can find more examples with different color schemes in [Screenshots](https://github.com/denysdovhan/spaceship-prompt/wiki/Screenshots) wiki-page.
@@ -96,16 +96,29 @@ Done. This command should link `spaceship.zsh` as `prompt_spaceship_setup` to yo
 
 ### [oh-my-zsh]
 
-* Set `ZSH_THEME=""` in your `.zshrc`
-* Follow instructions in [manual](https://github.com/denysdovhan/spaceship-prompt#manual) installation.
+Clone this repo:
+
+```zsh
+git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+```
+
+Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
+
+```zsh
+ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
+```
+
+Set `ZSH_THEME="spaceship"` in your `.zshrc`.
 
 ### [prezto]
 
-`prezto` follows vanilla Zsh prompt setup. Just use [npm](#npm) or follow instructions in [manual](https://github.com/denysdovhan/spaceship-prompt#manual) installation.
+* Follow [prezto-contrib#usage](https://github.com/belak/prezto-contrib#usage) to clone `prezto-contrib` to the proper location.
+* Enable the `contrib-prompt` module (before the `prompt` module).
+* Set `zstyle ':prezto:module:prompt' theme 'spaceship'` in your `.zpreztorc`.
 
 ### [antigen]
 
-Add the following snippet in your `~/.zshrc``:
+Add the following snippet in your `~/.zshrc`:
 
 ```
 antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
@@ -133,6 +146,18 @@ Use this command in your `.zshrc` to load Spaceship as prompt theme:
 
 ```
 zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
+```
+
+### Linux package manager
+
+#### Arch Linux
+
+Install the latest master from the AUR package [`spaceship-prompt-git`](https://aur.archlinux.org/packages/spaceship-prompt-git/):
+
+```
+git clone https://aur.archlinux.org/spaceship-prompt-git.git
+cd spaceship-prompt-git
+makepkg -si
 ```
 
 ### Manual
@@ -190,9 +215,9 @@ Still struggling? Please, [file an issue](https://github.com/denysdovhan/spacesh
 
 ## Team
 
-| [![Denys Dovhan](https://github.com/denysdovhan.png?size=100)](http://denysdovhan.com) | [![Salmanul Farzy](https://github.com/salmanulfarzy.png?size=100)](https://github.com/salmanulfarzy) |
-| :---: | :---: |
-| [Denys Dovhan](https://github.com/denysdovhan) | [Salmanul Farzy](https://github.com/salmanulfarzy) |
+| [![Denys Dovhan](https://github.com/denysdovhan.png?size=100)](http://denysdovhan.com) | [![Salmanul Farzy](https://github.com/salmanulfarzy.png?size=100)](https://github.com/salmanulfarzy) | [![Maxim Baz](https://github.com/maximbaz.png?size=100)](https://github.com/maximbaz) |
+| :---: | :---: | :---: |
+| [Denys Dovhan](https://github.com/denysdovhan) | [Salmanul Farzy](https://github.com/salmanulfarzy) | [Maxim Baz](https://github.com/maximbaz) |
 
 ## Donate
 

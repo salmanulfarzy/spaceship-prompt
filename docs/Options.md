@@ -45,7 +45,7 @@ SPACESHIP_PROMPT_ORDER=(
   line_sep      # Line break
   battery       # Battery level and status
   vi_mode       # Vi-mode indicator
-  jobs          # Backgound jobs indicator
+  jobs          # Background jobs indicator
   exit_code     # Exit code section
   char          # Prompt character
 )
@@ -119,6 +119,7 @@ Hostname is shown only when you're connected via SSH unless you change this beha
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
 | `SPACESHIP_HOST_SHOW` | `true` | Show host section (`true`, `false` or `always`) |
+| `SPACESHIP_HOST_SHOW_FULL` | `false` | Show full hostname section (`true`, `false`) |
 | `SPACESHIP_HOST_PREFIX` | `at·` | Prefix before the connected SSH machine name |
 | `SPACESHIP_HOST_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after the connected SSH machine name |
 | `SPACESHIP_HOST_COLOR` | `blue` | Color of host section |
@@ -146,7 +147,7 @@ Git section is consists with `git_branch` and `git_status` subsections. It is sh
 | `SPACESHIP_GIT_SHOW` | `true` | Show Git section |
 | `SPACESHIP_GIT_PREFIX` | `on·` | Prefix before Git section |
 | `SPACESHIP_GIT_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after Git section |
-| `SPACESHIP_GIT_SYMBOL` | ![·](https://user-images.githubusercontent.com/3459374/34947621-4f324a92-fa13-11e7-9b99-cdba2cdda6b9.png) | Character to be shown before Git section (requires [powerline patched font][powerline]) |
+| `SPACESHIP_GIT_SYMBOL` | ![·](https://user-images.githubusercontent.com/3459374/34947621-4f324a92-fa13-11e7-9b99-cdba2cdda6b9.png) | Character to be shown before Git section (requires [powerline patched font](https://github.com/powerline/fonts) |
 
 #### Git branch (`git_branch`)
 
@@ -191,6 +192,8 @@ Mercurial section is consists with `hg_branch` and `hg_status` subsections. It i
 
 #### Mercurial branch (`hg_branch`)
 
+Shows Mercurial bookmarks when available, otherwise shows Mercurial branch information.
+
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
 | `SPACESHIP_HG_BRANCH_SHOW` | `true` | Show Mercurial branch subsection |
@@ -233,7 +236,7 @@ Package version is shown when repository is a package (e.g. contains a `package.
 
 Node.js section is shown only in directories that contain `package.json` file, or `node_modules` folder, or any other file with `.js` extension.
 
-If you use [n] as Node.js version manager, please, set `SPACESHIP_NODE_DEFAULT_VERSION` to the default Node.js version. If current version is the same as `SPACESHIP_NODE_DEFAULT_VERSION`, then Node.js section will be hidden.
+If you set `SPACESHIP_NODE_DEFAULT_VERSION` to the default Node.js version and your current version is the same as `SPACESHIP_NODE_DEFAULT_VERSION`, then Node.js section will be hidden.
 
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
@@ -241,7 +244,7 @@ If you use [n] as Node.js version manager, please, set `SPACESHIP_NODE_DEFAULT_V
 | `SPACESHIP_NODE_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before Node.js section |
 | `SPACESHIP_NODE_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after Node.js section |
 | `SPACESHIP_NODE_SYMBOL` | `⬢·` | Character to be shown before Node.js version |
-| `SPACESHIP_NODE_DEFAULT_VERSION` | ` ` | Node.js version to be treated as default (for [n] support) |
+| `SPACESHIP_NODE_DEFAULT_VERSION` | ` ` | Node.js version to be treated as default |
 | `SPACESHIP_NODE_COLOR` | `green` | Color of Node.js section |
 
 ### Ruby (`ruby`)
@@ -386,6 +389,7 @@ Shows selected Amazon Web Services profile using '[named profiles](http://docs.a
 | `SPACESHIP_VENV_SHOW` | `true` | Show current Python virtualenv or not |
 | `SPACESHIP_VENV_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before the virtualenv section |
 | `SPACESHIP_VENV_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after the virtualenv section |
+| `SPACESHIP_VENV_GENERIC_NAMES` | `(virtualenv venv .venv)` | If the virtualenv folder is in this *array*, than use its parent directory as its name instead |
 | `SPACESHIP_VENV_COLOR` | `blue` | Color of virtualenv environment section |
 
 ### Conda virtualenv (`conda`)
@@ -462,11 +466,11 @@ Execution time of the last command. Will be displayed if it exceeds the set thre
 
 ### Battery (`battery`)
 
-By default, Battery section is shown only if battery level is below `SPACESHIP_BATTERY_THRESHOLD` (default: 10%) or it's fully charged.
+By default, Battery section is shown only if battery level is below `SPACESHIP_BATTERY_THRESHOLD` (default: 10%).
 
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
-| `SPACESHIP_BATTERY_SHOW` | `true` | Show battery section or not (`true`, `false`, `always` or `low`) |
+| `SPACESHIP_BATTERY_SHOW` | `true` | Show battery section or not (`true`, `false`, `always` or `charged`) |
 | `SPACESHIP_BATTERY_PREFIX` | ` ` | Prefix before battery section |
 | `SPACESHIP_BATTERY_SUFFIX` | `SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after battery section |
 | `SPACESHIP_BATTERY_SYMBOL_CHARGING` | `⇡` | Character to be shown if battery is charging |
@@ -480,8 +484,8 @@ By default, Battery section is shown only if battery level is below `SPACESHIP_B
 | :----------------------: | :-------------- | :-------------- | :------------ |
 | `false`                  | Hidden          | Hidden          | Hidden        |
 | `always`                 | Shown           | Shown           | Shown         |
-| `true`                   | Shown           | Hidden          | Shown         |
-| `low`                    | Shown           | Hidden          | Hidden        |
+| `true`                   | Shown           | Hidden          | Hidden        |
+| `charged`                | Shown           | Hidden          | Shown         |
 
 ### Vi-mode (`vi_mode`)
 
