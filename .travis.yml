@@ -14,6 +14,7 @@ jobs:
        provider: pages
        skip-cleanup: true
        github-token: $GITHUB_TOKEN
+       committer-from-gh: true
        keep-history: true
        local-dir: _book
 
