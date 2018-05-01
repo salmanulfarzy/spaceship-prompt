@@ -6,6 +6,14 @@
 # Configuration
 # ------------------------------------------------------------------------------
 
+# ------------------------------------------------------------------
+# | SPACESHIP_HOST_SHOW | show host on local | show host on remote |
+# |---------------------|--------------------|---------------------|
+# |        false        |        never       |        never        |
+# |         true        |        never       |        always       |
+# |        always       |       always       |        always       |
+# ------------------------------------------------------------------
+
 SPACESHIP_HOST_SHOW="${SPACESHIP_HOST_SHOW=true}"
 SPACESHIP_HOST_SHOW_FULL="${SPACESHIP_HOST_SHOW_FULL=false}"
 SPACESHIP_HOST_PREFIX="${SPACESHIP_HOST_PREFIX="at "}"

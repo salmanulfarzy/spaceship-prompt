@@ -125,6 +125,14 @@ Hostname is shown only when you're connected via SSH unless you change this beha
 | `SPACESHIP_HOST_COLOR` | `blue` | Color of host section |
 | `SPACESHIP_HOST_COLOR_SSH` | `green` | Color of host in SSH connection |
 
+`SPACESHIP_HOST_SHOW` defines when to show username in section. Here are the possible values:
+
+| `SPACESHIP_HOST_SHOW` | show host on local | show host on remote |
+|:---------------------:|:------------------:|:-------------------:|
+|        `false`        |        never       |        never        |
+|         `true`        |        never       |        always       |
+|        `always`       |       always       |        always       |
+
 ### Directory (`dir`)
 
 Directory is always shown and truncated to the value of `SPACESHIP_DIR_TRUNC`. While you are in repository, it shows only root directory and folders inside it.
