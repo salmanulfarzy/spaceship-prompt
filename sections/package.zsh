@@ -27,7 +27,7 @@ spaceship_package() {
   [[ -f package.json ]] || return
 
   # Grep and cut out package version
-  local package_version=$(grep -E '"version": "v?([0-9]+\.){1,}' package.json | cut -d\" -f4 2> /dev/null)
+  local package_version=$(grep -E '^  "version": "v?([0-9]+\.){1,}' package.json | cut -d\" -f4  2>/dev/null)
 
   # Handle version not found
   if [ ! "$package_version" ]; then
