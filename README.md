@@ -6,12 +6,6 @@
 
 # 🚀⭐ Spaceship ZSH
 
-[![NPM version][npm-image]][npm-url]
-[![Zsh][zsh-image]][zsh-url]
-[![Donate with card][donate-card-image]][donate-readme]
-[![Donate with Bitcoin][donate-btc-image]][donate-readme]
-[![Donate with Ethereum][donate-eth-image]][donate-readme]
-
 > A [Zsh][zsh-url] prompt for Astronauts.
 
 Spaceship is a minimalistic, powerful and extremely customizable [Zsh][zsh-url] prompt. It combines everything you may need for convenient work, without unnecessary complications, like a real spaceship.
