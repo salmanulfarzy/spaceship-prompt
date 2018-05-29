@@ -6,6 +6,13 @@
 
 # 🚀⭐ Spaceship ZSH
 
+[![NPM version][npm-image]][npm-url]
+[![Build status][ci-image]][ci-url]
+[![Zsh][zsh-image]][zsh-url]
+[![Donate with card][donate-card-image]][donate-readme]
+[![Donate with Bitcoin][donate-btc-image]][donate-readme]
+[![Donate with Ethereum][donate-eth-image]][donate-readme]
+
 > A [Zsh][zsh-url] prompt for Astronauts.
 
 Spaceship is a minimalistic, powerful and extremely customizable [Zsh][zsh-url] prompt. It combines everything you may need for convenient work, without unnecessary complications, like a real spaceship.
@@ -73,7 +80,7 @@ You can find more examples with different color schemes in [Screenshots](https:/
 
 For correct work you will first need:
 
-* [`zsh`](http://www.zsh.org/) (v5.0.6 or recent) must be installed.
+* [`zsh`](http://www.zsh.org/) (v5.2 or recent) must be installed.
 * [Powerline Font](https://github.com/powerline/fonts) must be installed and used in your terminal.
 
 ## Installing
@@ -222,8 +229,11 @@ MIT © [Denys Dovhan](http://denysdovhan.com)
 [npm-url]: https://npmjs.org/package/spaceship-prompt
 [npm-image]: https://img.shields.io/npm/v/spaceship-prompt.svg?style=flat-square
 
+[ci-url]: https://travis-ci.org/denysdovhan/spaceship-prompt
+[ci-image]: https://img.shields.io/travis/denysdovhan/spaceship-prompt.svg?style=flat-square
+
 [zsh-url]: http://zsh.org/
-[zsh-image]: https://img.shields.io/badge/zsh-%3E%3Dv5.0.6-777777.svg?style=flat-square
+[zsh-image]: https://img.shields.io/badge/zsh-%3E%3Dv5.2-777777.svg?style=flat-square
 
 <!-- References -->
 
