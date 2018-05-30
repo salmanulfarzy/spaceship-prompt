@@ -7,7 +7,6 @@ addons:
   apt:
     packages:
       - build-essential
-node_js: stable
 before_install:
   # Install OSX dependencies
   # - if [ "$TRAVIS_OS_NAME" == "osx" ]; then brew install mercurial; fi;
