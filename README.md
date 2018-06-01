@@ -9,9 +9,6 @@
 [![NPM version][npm-image]][npm-url]
 [![Build status][ci-image]][ci-url]
 [![Zsh][zsh-image]][zsh-url]
-[![Donate with card][donate-card-image]][donate-readme]
-[![Donate with Bitcoin][donate-btc-image]][donate-readme]
-[![Donate with Ethereum][donate-eth-image]][donate-readme]
 
 > A [Zsh][zsh-url] prompt for Astronauts.
 
@@ -229,8 +226,8 @@ MIT © [Denys Dovhan](http://denysdovhan.com)
 [npm-url]: https://npmjs.org/package/spaceship-prompt
 [npm-image]: https://img.shields.io/npm/v/spaceship-prompt.svg?style=flat-square
 
-[ci-url]: https://travis-ci.org/denysdovhan/spaceship-prompt
-[ci-image]: https://img.shields.io/travis/denysdovhan/spaceship-prompt.svg?style=flat-square
+[ci-url]: https://travis-ci.org/salmanulfarzy/spaceship-prompt
+[ci-image]: https://img.shields.io/travis/salmanulfarzy/spaceship-prompt.svg?style=flat-square
 
 [zsh-url]: http://zsh.org/
 [zsh-image]: https://img.shields.io/badge/zsh-%3E%3Dv5.2-777777.svg?style=flat-square
