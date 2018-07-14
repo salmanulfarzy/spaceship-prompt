@@ -46,6 +46,6 @@
     "gitbook-plugin-prism": "^2.3.0"
   },
   "dependencies": {
-    "gitbook-plugin-anchorjs": "^2.0.0"
+    "gitbook-plugin-anchorjs": "^2.0.1"
   }
 }

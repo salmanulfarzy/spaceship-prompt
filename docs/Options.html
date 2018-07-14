@@ -1227,6 +1227,11 @@ If current directory is write-protected or if current user has not enough rights
 <td>Number of folders of cwd to show in prompt, 0 to show all</td>
 </tr>
 <tr>
+<td style="text-align:left"><code>SPACESHIP_DIR_TRUNC_PREFIX</code></td>
+<td style="text-align:center"><code> </code></td>
+<td>Prefix before cwd when it&apos;s truncated. For example <code>&#x2026;/</code> or <code>.../</code>, empty to disable</td>
+</tr>
+<tr>
 <td style="text-align:left"><code>SPACESHIP_DIR_TRUNC_REPO</code></td>
 <td style="text-align:center"><code>true</code></td>
 <td>While in <code>git</code> repo, show only root directory and folders inside it</td>
@@ -2575,7 +2580,7 @@ If current directory is write-protected or if current user has not enough rights
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-06-01T16:24:10.348Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-06-01T16:25:54.133Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-07-14T06:43:27.636Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-14T06:45:17.276Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -2597,7 +2602,7 @@ If current directory is write-protected or if current user has not enough rights
         
     
         
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.0/anchor.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.1.1/anchor.min.js"></script>
         
     
         
