@@ -952,8 +952,16 @@ SPACESHIP_FOOBAR_COLOR=<span class="hljs-string">&quot;<span class="hljs-variabl
   <span class="hljs-comment"># http://zsh.sourceforge.net/Doc/Release/Expansion.html</span>
   [[ <span class="hljs-_">-f</span> foobar.conf || -n *.foo(<span class="hljs-comment">#qN^/) || -n *.bar(#qN^/) ]] || return</span>
 
-  <span class="hljs-comment"># Retrieve foobar status and save it to variable</span>
-  <span class="hljs-built_in">local</span> foobar_status=$(foobar status)
+  <span class="hljs-comment"># Use quotes around unassigned local variables to prevent</span>
+  <span class="hljs-comment"># getting replaced by global aliases</span>
+  <span class="hljs-comment"># http://zsh.sourceforge.net/Doc/Release/Shell-Grammar.html#Aliasing</span>
+  <span class="hljs-built_in">local</span> <span class="hljs-string">&apos;foobar_status&apos;</span>
+
+  <span class="hljs-keyword">if</span> [[ <span class="hljs-variable">$SOME_CONDITION</span> ]]; <span class="hljs-keyword">then</span>
+    foobar_status=$(foobar baz)
+  <span class="hljs-keyword">else</span>
+    foobar_status=$(foobar foo)
+  <span class="hljs-keyword">fi</span>
 
   <span class="hljs-comment"># Display foobar section</span>
   spaceship::section \
@@ -1131,7 +1139,7 @@ spaceship::union <span class="hljs-variable">$arr1</span> <span class="hljs-vari
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"API","level":"1.4","depth":1,"next":{"title":"Typical section","level":"1.4.1","depth":2,"anchor":"#typical-section","path":"docs/API.md","ref":"docs/API.md#typical-section","articles":[]},"previous":{"title":"Sections","level":"1.3.3","depth":2,"anchor":"#sections","path":"CONTRIBUTING.md","ref":"CONTRIBUTING.md#sections","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/API.md","mtime":"2018-07-21T11:11:54.470Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-21T11:13:49.095Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"API","level":"1.4","depth":1,"next":{"title":"Typical section","level":"1.4.1","depth":2,"anchor":"#typical-section","path":"docs/API.md","ref":"docs/API.md#typical-section","articles":[]},"previous":{"title":"Sections","level":"1.3.3","depth":2,"anchor":"#sections","path":"CONTRIBUTING.md","ref":"CONTRIBUTING.md#sections","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/API.md","mtime":"2018-07-21T13:18:55.539Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-07-21T13:20:43.952Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
