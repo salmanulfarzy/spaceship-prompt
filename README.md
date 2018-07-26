@@ -1,20 +1,57 @@
-<div align="center">
-  <a href="https://github.com/denysdovhan/spaceship-prompt">
+<h1 align="center">
+  <a href="https://github.com/salmanulfarzy/spaceship-prompt">
     <img alt="spaceship →~ prompt" src="https://cloud.githubusercontent.com/assets/3459374/21679181/46e24706-d34b-11e6-82ee-5efb3d2ba70f.png" width="400">
   </a>
+  <br>🚀⭐ Spaceship ZSH <br>
+</h1>
+
+<h4 align="center">
+  <a href="http://zsh.org" target="_blank"><code>Zsh</code></a> prompt for Astronauts.
+</h4>
+
+<p align="center">
+  <a href="https://travis-ci.org/salmanulfarzy/spaceship-prompt">
+    <img src="https://img.shields.io/travis/denysdovhan/spaceship-prompt.svg?style=flat-square"
+      alt="CI Status" />
+  </a>
+
+  <a href="http://zsh.org/">
+    <img src=" https://img.shields.io/badge/zsh-%3E%3Dv5.2-777777.svg?style=flat-square"
+      alt="Zsh Version" />
+  </a>
+
+  <a href="#donate">
+    <img src="https://img.shields.io/badge/$-donate-ff69b4.svg?style=flat-square"
+      alt="Donate" />
+  </a>
+</p>
+
+<div align="center">
+  <h4>
+    <a href="https://salmanulfarzy.com/spaceship-prompt/">Website |</a>
+    <a href="#installing">Install |</a>
+    <a href="#features">Features |</a>
+    <a href="./docs/Options.md">Options |</a>
+    <a href="./docs/API.md">API</a>
+  </h4>
 </div>
 
-# 🚀⭐ Spaceship ZSH
-
-[![NPM version][npm-image]][npm-url]
-[![Build status][ci-image]][ci-url]
-[![Zsh][zsh-image]][zsh-url]
-
-> A [Zsh][zsh-url] prompt for Astronauts.
+<div align="center">
+  <sub>Built with ❤︎ by
+  <a href="https://denysdovhan.com">Denys Dovhan</a> and
+  <a href="https://github.com/denysdovhan/spaceship-prompt/graphs/contributors">contributors </a>
+</div>
+<br>
 
 Spaceship is a minimalistic, powerful and extremely customizable [Zsh][zsh-url] prompt. It combines everything you may need for convenient work, without unnecessary complications, like a real spaceship.
 
-Currently it shows:
+<p align="center">
+  <img alt="Spaceship with Hyper and One Dark" src="https://user-images.githubusercontent.com/10276208/36086434-5de52ace-0ff2-11e8-8299-c67f9ab4e9bd.gif" width="980px">
+</p>
+
+<sub>You can find more examples with different color schemes in <a href="https://github.com/denysdovhan/spaceship-prompt/wiki/Screenshots">Screenshots </a>wiki-page.</sub>
+
+## Features
 
 * Clever hostname and username displaying.
 * Prompt character turns red if the last command exits with non-zero code.
@@ -64,14 +101,6 @@ Currently it shows:
 * Execution time of the last command if it exceeds the set threshold.
 
 Want more features? Please, [open an issue](https://github.com/denysdovhan/spaceship-prompt/issues/new/choose) or send pull request.
-
-## Preview
-
-<p align="center">
-  <img alt="Spaceship with Hyper and One Dark" src="https://user-images.githubusercontent.com/10276208/36086434-5de52ace-0ff2-11e8-8299-c67f9ab4e9bd.gif" width="980px">
-</p>
-
-You can find more examples with different color schemes in [Screenshots](https://github.com/denysdovhan/spaceship-prompt/wiki/Screenshots) wiki-page.
 
 ## Requirements
 
@@ -217,23 +246,25 @@ Still struggling? Please, [file an issue](https://github.com/denysdovhan/spacesh
 | :---: | :---: | :---: |
 | [Denys Dovhan](https://github.com/denysdovhan) | [Salmanul Farzy](https://github.com/salmanulfarzy) | [Maxim Baz](https://github.com/maximbaz) |
 
+## Donate
+
+Hi! I work on this project in my spare time, beside my primary job. I hope you enjoy using Spaceship, and if you do, please, [buy me a cup of tea ☕️][donate-card-url].
+
+| Credit/Debit card | Bitcoin | Ethereum |
+|:-----------------:|:-------:|:--------:|
+| [Donate with LiqPay][donate-card-url] | `1FrPrQb6ACTkbSBAz9PduJWrDFfq41Ggb4` | `0x6aF39C917359897ae6969Ad682C14110afe1a0a1` |
+| <img src="https://cloud.githubusercontent.com/assets/3459374/25771981/6f2ba08c-3268-11e7-9fc8-49e3f7b9e0e5.png" width="100px"/> | <img src="https://user-images.githubusercontent.com/3459374/33760933-1c9b81b4-dc10-11e7-8e4b-22d81f98c138.png" width="100px"/> | <img src="https://user-images.githubusercontent.com/3459374/33760932-1c7b3fb2-dc10-11e7-9774-411264d533da.png" width="100px"/> |
+
+I would appreciate your support! _Thank you!_
+
 ## License
 
 MIT © [Denys Dovhan](http://denysdovhan.com)
 
-<!-- Badges -->
-
-[npm-url]: https://npmjs.org/package/spaceship-prompt
-[npm-image]: https://img.shields.io/npm/v/spaceship-prompt.svg?style=flat-square
-
-[ci-url]: https://travis-ci.org/salmanulfarzy/spaceship-prompt
-[ci-image]: https://img.shields.io/travis/salmanulfarzy/spaceship-prompt.svg?style=flat-square
-
-[zsh-url]: http://zsh.org/
-[zsh-image]: https://img.shields.io/badge/zsh-%3E%3Dv5.2-777777.svg?style=flat-square
-
 <!-- References -->
 
+[zsh-url]: http://zsh.org
+[donate-card-url]: https://www.liqpay.com/en/checkout/380951100392
 [oh-my-zsh]: http://ohmyz.sh/
 [prezto]: https://github.com/sorin-ionescu/prezto
 [antigen]: http://antigen.sharats.me/
