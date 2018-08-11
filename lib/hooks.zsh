@@ -27,3 +27,9 @@ spaceship_exec_vcs_info_precmd_hook() {
   [[ $SPACESHIP_GIT_BRANCH_SHOW == false ]] && return
   vcs_info
 }
+
+spaceship_jobs_precmd_hook() {
+  [[ $SPACESHIP_JOBS_SHOW == false ]] && return
+   JOBS_AMOUNT=${#${jobstates%%:*}}
+ }
+
