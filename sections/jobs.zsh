@@ -22,7 +22,8 @@ SPACESHIP_JOBS_AMOUNT_SUFFIX="${SPACESHIP_JOBS_AMOUNT_SUFFIX=""}"
 spaceship_jobs() {
   [[ $SPACESHIP_JOBS_SHOW == false ]] && return
 
-  local jobs_amount=$( jobs -d | awk '!/pwd/' | wc -l | tr -d " ")
+  # local jobs_amount=$( jobs -d | awk '!/pwd/' | wc -l | tr -d " ")
+  local jobs_amount=$JOBS_AMOUNT
 
   [[ $jobs_amount -gt 0 ]] || return
 
