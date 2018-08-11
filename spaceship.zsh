@@ -190,6 +190,7 @@ prompt_spaceship_setup() {
   # Add exec_time hooks
   add-zsh-hook preexec spaceship_exec_time_preexec_hook
   add-zsh-hook precmd spaceship_exec_time_precmd_hook
+  add-zsh-hook precmd spaceship_jobs_precmd_hook
 
   # Disable python virtualenv environment prompt prefix
   VIRTUAL_ENV_DISABLE_PROMPT=true
