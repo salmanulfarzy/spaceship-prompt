@@ -16,6 +16,8 @@ SPACESHIP_KUBECONTEXT_SUFFIX="${SPACESHIP_KUBECONTEXT_SUFFIX="$SPACESHIP_PROMPT_
 # See: https://github.com/denysdovhan/spaceship-prompt/pull/432
 SPACESHIP_KUBECONTEXT_SYMBOL="${SPACESHIP_KUBECONTEXT_SYMBOL="☸️  "}"
 SPACESHIP_KUBECONTEXT_COLOR="${SPACESHIP_KUBECONTEXT_COLOR="cyan"}"
+SPACESHIP_KUBECONTEXT_VERBOSE="${SPACESHIP_KUBECONTEXT_VERBOSE=false}"
+SPACESHIP_KUBECONTEXT_NAMEARRAY="${(A)SPACESHIP_KUBECONTEXT_NAMEARRAY=''}"
 
 # ------------------------------------------------------------------------------
 # Section
@@ -28,6 +30,12 @@ spaceship_kubecontext() {
   spaceship::exists kubectl || return
 
   local kube_context=$(kubectl config current-context 2>/dev/null)
+
+  if [[ $SPACESHIP_KUBECONTEXT_VERBOSE == false ]]; then
+    if [[ "${SPACESHIP_KUBECONTEXT_NAMEARRAY[$kube_context]}" ]]; then
+      kube_context=${(v)SPACESHIP_KUBECONTEXT_NAMEARRAY[$kube_context]}
+    fi
+  fi
 
   [[ -z $kube_context ]] && return
 
