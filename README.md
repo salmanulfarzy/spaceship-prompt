@@ -104,7 +104,7 @@ Want more features? Please, [open an issue](https://github.com/denysdovhan/space
 
 ## Requirements
 
-For correct work you will first need:
+To work correctly, you will first need:
 
 * [`zsh`](http://www.zsh.org/) (v5.2 or recent) must be installed.
 * [Powerline Font](https://github.com/powerline/fonts) must be installed and used in your terminal.
@@ -119,7 +119,7 @@ npm install -g spaceship-prompt
 
 Done. This command should link `spaceship.zsh` as `prompt_spaceship_setup` to your `$fpath` and set `prompt spaceship` in `.zshrc`. Just reload your terminal.
 
-**💡 Tip:** Update Spaceship to new versions as any other package.
+**💡 Tip:** Update Spaceship to new versions as you would any other package.
 
 ### [oh-my-zsh]
 
@@ -236,7 +236,7 @@ Also, take a look at popular option presets or share your own configuration on [
 
 ## Troubleshooting
 
-Have a trouble? Take a look at out [Troubleshooting](./docs/Troubleshooting.md) page.
+Having trouble? Take a look at out [Troubleshooting](./docs/Troubleshooting.md) page.
 
 Still struggling? Please, [file an issue](https://github.com/denysdovhan/spaceship-prompt/issues/new/choose), describe your problem and we will gladly help you.
 
@@ -248,7 +248,7 @@ Still struggling? Please, [file an issue](https://github.com/denysdovhan/spacesh
 
 ## Donate
 
-Hi! I work on this project in my spare time, beside my primary job. I hope you enjoy using Spaceship, and if you do, please, [buy me a cup of tea ☕️][donate-card-url].
+Hi! I work on this project in my spare time, in addition to my primary job. I hope you enjoy using Spaceship. If you do, please, [buy me a cup of tea ☕️][donate-card-url].
 
 | Credit/Debit card | Bitcoin | Ethereum |
 |:-----------------:|:-------:|:--------:|
