@@ -111,22 +111,12 @@ To work correctly, you will first need:
 
 ## Installing
 
-### [npm]
-
-```
-npm install -g spaceship-prompt
-```
-
-Done. This command should link `spaceship.zsh` as `prompt_spaceship_setup` to your `$fpath` and set `prompt spaceship` in `.zshrc`. Just reload your terminal.
-
-**💡 Tip:** Update Spaceship to new versions as you would any other package.
-
 ### [oh-my-zsh]
 
 Clone this repo:
 
 ```zsh
-git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+git clone https://github.com/salmanulfarzy/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
 ```
 
 Symlink `spaceship.zsh-theme` to your oh-my-zsh custom themes directory:
@@ -137,18 +127,12 @@ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/the
 
 Set `ZSH_THEME="spaceship"` in your `.zshrc`.
 
-### [prezto]
-
-* Follow [prezto-contrib#usage](https://github.com/belak/prezto-contrib#usage) to clone `prezto-contrib` to the proper location.
-* Enable the `contrib-prompt` module (before the `prompt` module).
-* Set `zstyle ':prezto:module:prompt' theme 'spaceship'` in your `.zpreztorc`.
-
 ### [antigen]
 
 Add the following snippet in your `~/.zshrc`:
 
 ```
-antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
+antigen theme https://github.com/salmanulfarzy/spaceship-prompt spaceship
 ```
 
 ### [antibody]
@@ -156,7 +140,7 @@ antigen theme https://github.com/denysdovhan/spaceship-prompt spaceship
 Update your `.zshrc` file with the following line:
 
 ```
-antibody bundle denysdovhan/spaceship-prompt
+antibody bundle salmanulfarzy/spaceship-prompt
 ```
 
 ### [zgen]
@@ -164,34 +148,21 @@ antibody bundle denysdovhan/spaceship-prompt
 Add the following line to your `~/.zshrc` where you're adding your other Zsh plugins:
 
 ```
-zgen load denysdovhan/spaceship-prompt spaceship
+zgen load salmanulfarzy/spaceship-prompt spaceship
 ```
 
 ### [zplug]
 
 Use this command in your `.zshrc` to load Spaceship as prompt theme:
 
-```
-zplug denysdovhan/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
-```
-
-### Linux package manager
-
-#### Arch Linux
-
-Install the latest master from the AUR package [`spaceship-prompt-git`](https://aur.archlinux.org/packages/spaceship-prompt-git/):
-
-```
-git clone https://aur.archlinux.org/spaceship-prompt-git.git
-cd spaceship-prompt-git
-makepkg -si
+zplug salmanulfarzy/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 ```
 
 ### Manual
 
 If you have problems with approaches above, follow these instructions:
 
-* Clone this repo `git clone https://github.com/denysdovhan/spaceship-prompt.git`
+* Clone this repo `git clone https://github.com/salmanulfarzy/spaceship-prompt.git`
 * Symlink `spaceship.zsh` to somewhere in [`$fpath`](http://www.refining-linux.org/archives/46/ZSH-Gem-12-Autoloading-functions/) as `prompt_spaceship_setup`.
 * Initialize prompt system and choose `spaceship`.
 
@@ -238,7 +209,7 @@ Also, take a look at popular option presets or share your own configuration on [
 
 Having trouble? Take a look at out [Troubleshooting](./docs/Troubleshooting.md) page.
 
-Still struggling? Please, [file an issue](https://github.com/denysdovhan/spaceship-prompt/issues/new/choose), describe your problem and we will gladly help you.
+Still struggling? Please, [file an issue](https://github.com/salmanulfarzy/spaceship-prompt/issues/new/choose), describe your problem and we will gladly help you.
 
 ## Team
 
