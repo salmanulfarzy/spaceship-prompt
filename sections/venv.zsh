@@ -35,7 +35,7 @@ spaceship_venv() {
   then
     venv="$VIRTUAL_ENV:h:t"
   else
-    venv="$VIRTUAL_ENV:t"
+    venv="${${(@s|-|)VIRTUAL_ENV:t}[1]}"
   fi
 
   if [[ $SPACESHIP_VENV_PYTHON_VERSION_SHOW == true ]]; then
