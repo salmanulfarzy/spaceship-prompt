@@ -131,7 +131,7 @@ Set `ZSH_THEME="spaceship"` in your `.zshrc`.
 
 Add the following snippet in your `~/.zshrc`:
 
-```
+```zsh
 antigen theme https://github.com/salmanulfarzy/spaceship-prompt spaceship
 ```
 
@@ -139,7 +139,7 @@ antigen theme https://github.com/salmanulfarzy/spaceship-prompt spaceship
 
 Update your `.zshrc` file with the following line:
 
-```
+```zsh
 antibody bundle salmanulfarzy/spaceship-prompt
 ```
 
@@ -147,7 +147,7 @@ antibody bundle salmanulfarzy/spaceship-prompt
 
 Add the following line to your `~/.zshrc` where you're adding your other Zsh plugins:
 
-```
+```zsh
 zgen load salmanulfarzy/spaceship-prompt spaceship
 ```
 
@@ -155,6 +155,7 @@ zgen load salmanulfarzy/spaceship-prompt spaceship
 
 Use this command in your `.zshrc` to load Spaceship as prompt theme:
 
+```zsh
 zplug salmanulfarzy/spaceship-prompt, use:spaceship.zsh, from:github, as:theme
 ```
 
@@ -171,7 +172,7 @@ If you have problems with approaches above, follow these instructions:
 Run `echo $fpath` to see possible location and link `spaceship.zsh` there, like:
 
 ```zsh
-$ ln -sf "$PWD/spaceship.zsh" "/usr/local/share/zsh/site-functions/prompt_spaceship_setup"
+ln -sf "$PWD/spaceship.zsh" "/usr/local/share/zsh/site-functions/prompt_spaceship_setup"
 ```
 
 For a user-specific installation, simply add a directory to `$fpath` for that user in `.zshrc`:
@@ -183,7 +184,7 @@ fpath=( "$HOME/.zfunctions" $fpath )
 Then install the theme like this:
 
 ```zsh
-$ ln -sf "$PWD/spaceship.zsh" "$HOME/.zfunctions/prompt_spaceship_setup"
+ln -sf "$PWD/spaceship.zsh" "$HOME/.zfunctions/prompt_spaceship_setup"
 ```
 
 For initializing prompt system add this to your `.zshrc`:
