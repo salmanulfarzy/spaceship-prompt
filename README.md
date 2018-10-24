@@ -202,7 +202,7 @@ Spaceship works well out of the box, but you can customize almost everything if 
 * [**Options**](./docs/Options.md) — Tweak section's behavior with tons of options.
 * [**API**](./docs/API.md) — Define a custom section that will do exactly what you want.
 
-You have ability to customize or disable specific elements of Spaceship. All options must be overridden in your `.zshrc` file **after** the theme.
+You have ability to customize or disable specific elements of Spaceship. All options must be overridden in your `.zshrc` file **before** the theme.
 
 Also, take a look at popular option presets or share your own configuration on [Presets](https://github.com/denysdovhan/spaceship-prompt/wiki/Presets) wiki page.
 
