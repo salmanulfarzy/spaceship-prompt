@@ -30,7 +30,7 @@
   * [Amazon Web Services (aws)](/docs/Options.md#amazon-web-services-aws-aws)
   * [Virtualenv (venv)](/docs/Options.md#virtualenv-venv)
   * [Conda Virtualenv (conda)](/docs/Options.md#conda-virtualenv-conda)
-  * [Pyenv (pyenv)](/docs/Options.md#pyenv-pyenv)
+  * [Python (python)](/docs/Options.md#python-python)
   * [.NET (dotnet)](/docs/Options.md#net-dotnet)
   * [Ember (ember)](/docs/Options.md#emberjs-ember)
   * [Kubectl context (kubecontext)](/docs/Options.md#kubectl-context-kubecontext)

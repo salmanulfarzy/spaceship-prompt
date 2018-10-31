@@ -37,7 +37,7 @@ SPACESHIP_PROMPT_ORDER=(
   aws           # Amazon Web Services section
   venv          # virtualenv section
   conda         # conda virtualenv section
-  pyenv         # Pyenv section
+  python        # Python section
   dotnet        # .NET section
   ember         # Ember.js section
   kubecontext   # Kubectl context section
@@ -412,17 +412,17 @@ Show activated conda virtual environment. Disable native conda prompt by `conda 
 | `SPACESHIP_CONDA_SYMBOL` | `🅒·` | Character to be shown before conda virtualenv section |
 | `SPACESHIP_CONDA_COLOR` | `blue` | Color of conda virtualenv environment section |
 
-### Pyenv (`pyenv`)
+### Python (`python`)
 
-pyenv section is shown only in directories that contain `requirements.txt` or any other file with `.py` extension.
+Python section is shown only in directories that contain `requirements.txt` or any other file with `.py` extension.
 
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
-| `SPACESHIP_PYENV_SHOW` | `true` | Show current Pyenv version or not |
-| `SPACESHIP_PYENV_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before the pyenv section |
-| `SPACESHIP_PYENV_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after the pyenv section |
-| `SPACESHIP_PYENV_SYMBOL` | `🐍·` | Character to be shown before Pyenv version |
-| `SPACESHIP_PYENV_COLOR` | `yellow` | Color of Pyenv section |
+| `SPACESHIP_PYTHON_SHOW` | `true` | Show current Python version or not |
+| `SPACESHIP_PYTHON_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before the python section |
+| `SPACESHIP_PYTHON_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after the python section |
+| `SPACESHIP_PYTHON_SYMBOL` | `🐍·` | Character to be shown before python version |
+| `SPACESHIP_PYTHON_COLOR` | `yellow` | Color of python section |
 
 ### .NET (`dotnet`)
 

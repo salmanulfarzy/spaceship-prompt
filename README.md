@@ -86,7 +86,7 @@ Spaceship is a minimalistic, powerful and extremely customizable [Zsh][zsh-url] 
 * Current Amazon Web Services (AWS) profile (`☁️`) ([Using named profiles](http://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html)).
 * Current Python virtualenv.
 * Current Conda virtualenv (`🅒`).
-* Current Python pyenv (`🐍`).
+* Current Python version (`🐍`).
 * Current .NET SDK version, through dotnet-cli (`.NET`).
 * Current Ember.js version, through ember-cli (`🐹`).
 * Current Kubectl context (`☸️`).
