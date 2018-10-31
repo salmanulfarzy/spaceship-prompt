@@ -25,7 +25,11 @@ spaceship_python() {
   # Show python python version only for Python-specific folders
   [[ -f requirements.txt ]] || [[ -f Pipfile ]] || [[ -n *.py(#qN^/) ]] || return
 
-  local py_version=${(@)$(python -V 2>&1)[2]}
+  local 'py_version'
+
+  if  [[ -n "$VIRTUAL_ENV" ]] || [[ $SPACESHIP_PYTHON_SHOW == always ]]; then
+    py_version=${(@)$(python -V 2>&1)[2]}
+  fi
 
   [[ -z $py_version ]] && return
 

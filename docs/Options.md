@@ -414,11 +414,11 @@ Show activated conda virtual environment. Disable native conda prompt by `conda 
 
 ### Python (`python`)
 
-Python section is shown only in directories that contain `requirements.txt` or any other file with `.py` extension.
+Python version is shown inside directories that contain files `requirements.txt`, `Pipfile` or any file with `.py` extension and either inside virtual environment of when configured as `always` show.
 
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
-| `SPACESHIP_PYTHON_SHOW` | `true` | Show current Python version or not |
+| `SPACESHIP_PYTHON_SHOW` | `true` | Show current Python version or not (`true`, `false` or `always`)  |
 | `SPACESHIP_PYTHON_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before the python section |
 | `SPACESHIP_PYTHON_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after the python section |
 | `SPACESHIP_PYTHON_SYMBOL` | `🐍·` | Character to be shown before python version |
