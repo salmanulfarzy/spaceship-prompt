@@ -1,7 +1,7 @@
 #
 # python
 #
-# python is versatile scripting language.
+# python is an interpreted high-level programming language
 # Link: https://python.org/
 
 # ------------------------------------------------------------------------------
