@@ -1253,8 +1253,8 @@ If current directory is write-protected or if current user has not enough rights
 </tr>
 <tr>
 <td style="text-align:left"><code>SPACESHIP_DIR_LOCK_SYMBOL</code></td>
-<td style="text-align:center"><code>&#xB7;&#x1F512;</code></td>
-<td>The symbol displayed if directory is write-protected</td>
+<td style="text-align:center"><img src="https://user-images.githubusercontent.com/10276208/46248218-4af95d80-c434-11e8-8e25-595d792503f1.png" alt="&#xB7;&#xE0A2;"></td>
+<td>The symbol displayed if directory is write-protected (requires powerline patched font)</td>
 </tr>
 <tr>
 <td style="text-align:left"><code>SPACESHIP_DIR_LOCK_COLOR</code></td>
@@ -1534,7 +1534,7 @@ If current directory is write-protected or if current user has not enough rights
 <blockquote>
 <p>Works only for <a href="https://www.npmjs.com/" target="_blank">npm</a> at the moment. Please, help us improve this section!</p>
 </blockquote>
-<p>Package version is shown when repository is a package (e.g. contains a <code>package.json</code> file).</p>
+<p>Package version is shown when repository is a package (e.g. contains a <code>package.json</code> file). Install <a href="https://stedolan.github.io/jq/" target="_blank">jq</a> for <strong>improved performace</strong> of this section (<a href="Troubleshooting.html#why-is-my-prompt-slow">Why?</a>)</p>
 <blockquote>
 <p><strong>Note:</strong> This is the version of the package you are working on, not the version of package manager itself.</p>
 </blockquote>
@@ -1824,7 +1824,7 @@ If current directory is write-protected or if current user has not enough rights
 </tbody>
 </table>
 <h3 id="go-golang">Go (<code>golang</code>)</h3>
-<p>Go section is shown only in directories that contain <code>Godeps</code>, <code>glide.yaml</code>, any other file with <code>.go</code> extension, or when current directory is in the Go workspace defined in <code>$GOPATH</code>.</p>
+<p>Go section is shown only in directories that contain <code>go.mod</code>, <code>Godeps</code>, <code>glide.yaml</code>, any other file with <code>.go</code> extension, or when current directory is in the Go workspace defined in <code>$GOPATH</code>.</p>
 <table>
 <thead>
 <tr>
@@ -1934,6 +1934,11 @@ If current directory is write-protected or if current user has not enough rights
 <td style="text-align:left"><code>SPACESHIP_RUST_COLOR</code></td>
 <td style="text-align:center"><code>red</code></td>
 <td>Color of Rust section</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPACESHIP_RUST_VERBOSE_VERSION</code></td>
+<td style="text-align:center"><code>false</code></td>
+<td>Show what branch is being used, if any. (Beta, Nightly)</td>
 </tr>
 </tbody>
 </table>
@@ -2057,7 +2062,7 @@ If current directory is write-protected or if current user has not enough rights
 </tbody>
 </table>
 <h3 id="amazon-web-services-aws-aws">Amazon Web Services (AWS) (<code>aws</code>)</h3>
-<p>Shows selected Amazon Web Services profile using &apos;<a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html" target="_blank">named profiles</a>&apos;.</p>
+<p>Shows selected Amazon Web Services profile configured using  <a href="http://docs.aws.amazon.com/cli/latest/userguide/cli-multiple-profiles.html" target="_blank"><code>AWS_PROFILE</code></a> variable.</p>
 <table>
 <thead>
 <tr>
@@ -2251,7 +2256,8 @@ If current directory is write-protected or if current user has not enough rights
 </tbody>
 </table>
 <h3 id="kubectl-context-kubecontext">Kubectl context (<code>kubecontext</code>)</h3>
-<p>Shows the active kubectl context.</p>
+<p>Shows the active kubectl context, which consists of a cluster name and, when working in a non-default namespace, also a namespace name.</p>
+<p><strong>&#x1F4A1; Tip:</strong>  If your cluster name (and thus context name) is too long, you can give it a shorter name using <code>kubectl config rename-context very_long_context_name name</code>.</p>
 <table>
 <thead>
 <tr>
@@ -2595,7 +2601,7 @@ If current directory is write-protected or if current user has not enough rights
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-11-23T12:32:14.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-23T12:34:06.795Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-11-23T16:10:18.162Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-23T16:12:11.732Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

@@ -26,19 +26,21 @@ spaceship_package() {
   # @todo: add more package managers
   [[ -f package.json ]] || return
 
-  local package_version
+  local 'package_version'
 
   if spaceship::exists jq; then
     package_version=$(jq -r '.version' package.json 2>/dev/null)
-  else
-    package_version=$(grep -E '^  "version": "v?([0-9]+\.){1,}' package.json | cut -d\" -f4  2>/dev/null)
+  elif spaceship::exists python; then
+    package_version=$(python -c "import json; print(json.load(open('package.json'))['version'])" 2>/dev/null)
+  elif spaceship::exists node; then
+    package_version=$(node -p "require('./package.json').version" 2> /dev/null)
   fi
 
-  [[ -z $package_version ]] && return
+  [[ -z $package_version || "$package_version" == "undefined" ]] && return
 
   spaceship::section \
     "$SPACESHIP_PACKAGE_COLOR" \
     "$SPACESHIP_PACKAGE_PREFIX" \
-    "${SPACESHIP_PACKAGE_SYMBOL}${package_version}" \
+    "${SPACESHIP_PACKAGE_SYMBOL}v${package_version}" \
     "$SPACESHIP_PACKAGE_SUFFIX"
 }
