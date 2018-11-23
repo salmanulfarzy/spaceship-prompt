@@ -350,6 +350,19 @@
     
         <li class="chapter " data-level="1.2.13" data-path="Options.html">
             
+                <a href="Options.html#python-python">
+            
+                    
+                    Python (python)
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.14" data-path="Options.html">
+            
                 <a href="Options.html#elixir-elixir">
             
                     
@@ -361,7 +374,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.14" data-path="Options.html">
+        <li class="chapter " data-level="1.2.15" data-path="Options.html">
             
                 <a href="Options.html#xcode-xcode">
             
@@ -374,7 +387,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.15" data-path="Options.html">
+        <li class="chapter " data-level="1.2.16" data-path="Options.html">
             
                 <a href="Options.html#swift-swift">
             
@@ -387,7 +400,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.16" data-path="Options.html">
+        <li class="chapter " data-level="1.2.17" data-path="Options.html">
             
                 <a href="Options.html#go-golang">
             
@@ -400,7 +413,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.17" data-path="Options.html">
+        <li class="chapter " data-level="1.2.18" data-path="Options.html">
             
                 <a href="Options.html#php-php">
             
@@ -413,7 +426,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.18" data-path="Options.html">
+        <li class="chapter " data-level="1.2.19" data-path="Options.html">
             
                 <a href="Options.html#rust-rust">
             
@@ -426,7 +439,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.19" data-path="Options.html">
+        <li class="chapter " data-level="1.2.20" data-path="Options.html">
             
                 <a href="Options.html#haskell-haskell">
             
@@ -439,7 +452,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.20" data-path="Options.html">
+        <li class="chapter " data-level="1.2.21" data-path="Options.html">
             
                 <a href="Options.html#julia-julia">
             
@@ -452,7 +465,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.21" data-path="Options.html">
+        <li class="chapter " data-level="1.2.22" data-path="Options.html">
             
                 <a href="Options.html#docker-docker">
             
@@ -465,7 +478,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.22" data-path="Options.html">
+        <li class="chapter " data-level="1.2.23" data-path="Options.html">
             
                 <a href="Options.html#amazon-web-services-aws-aws">
             
@@ -478,7 +491,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.23" data-path="Options.html">
+        <li class="chapter " data-level="1.2.24" data-path="Options.html">
             
                 <a href="Options.html#virtualenv-venv">
             
@@ -491,25 +504,12 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.24" data-path="Options.html">
+        <li class="chapter " data-level="1.2.25" data-path="Options.html">
             
                 <a href="Options.html#conda-virtualenv-conda">
             
                     
                     Conda Virtualenv (conda)
-            
-                </a>
-            
-
-            
-        </li>
-    
-        <li class="chapter " data-level="1.2.25" data-path="Options.html">
-            
-                <a href="Options.html#pyenv-pyenv">
-            
-                    
-                    Pyenv (pyenv)
             
                 </a>
             
@@ -922,6 +922,7 @@
   package       <span class="hljs-comment"># Package version</span>
   node          <span class="hljs-comment"># Node.js section</span>
   ruby          <span class="hljs-comment"># Ruby section</span>
+  python        <span class="hljs-comment"># Python section</span>
   elixir        <span class="hljs-comment"># Elixir section</span>
   xcode         <span class="hljs-comment"># Xcode section</span>
   swift         <span class="hljs-comment"># Swift section</span>
@@ -934,7 +935,6 @@
   aws           <span class="hljs-comment"># Amazon Web Services section</span>
   venv          <span class="hljs-comment"># virtualenv section</span>
   conda         <span class="hljs-comment"># conda virtualenv section</span>
-  pyenv         <span class="hljs-comment"># Pyenv section</span>
   dotnet        <span class="hljs-comment"># .NET section</span>
   ember         <span class="hljs-comment"># Ember.js section</span>
   kubecontext   <span class="hljs-comment"># Kubectl context section</span>
@@ -1656,6 +1656,44 @@ If current directory is write-protected or if current user has not enough rights
 </tr>
 </tbody>
 </table>
+<h3 id="python-python">Python (<code>python</code>)</h3>
+<p>Python version is shown only inside directories that contain relevant files like <code>requirements.txt</code>, <code>Pipfile</code> or any other file with <code>.py</code> extension with virtual environment activated or if section is configured to be displayed <code>always</code> with relevant files.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Variable</th>
+<th style="text-align:center">Default</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><code>SPACESHIP_PYTHON_SHOW</code></td>
+<td style="text-align:center"><code>true</code></td>
+<td>Show current Python version or not (<code>true</code>, <code>false</code> or <code>always</code>)</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPACESHIP_PYTHON_PREFIX</code></td>
+<td style="text-align:center"><code>$SPACESHIP_PROMPT_DEFAULT_PREFIX</code></td>
+<td>Prefix before the python section</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPACESHIP_PYTHON_SUFFIX</code></td>
+<td style="text-align:center"><code>$SPACESHIP_PROMPT_DEFAULT_SUFFIX</code></td>
+<td>Suffix after the python section</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPACESHIP_PYTHON_SYMBOL</code></td>
+<td style="text-align:center"><code>&#x1F40D;&#xB7;</code></td>
+<td>Character to be shown before python version</td>
+</tr>
+<tr>
+<td style="text-align:left"><code>SPACESHIP_PYTHON_COLOR</code></td>
+<td style="text-align:center"><code>yellow</code></td>
+<td>Color of python section</td>
+</tr>
+</tbody>
+</table>
 <h3 id="elixir-elixir">Elixir (<code>elixir</code>)</h3>
 <p>Elixir section is shown only in directories that contain <code>mix.exs</code>, or any other file with <code>.ex</code> or <code>.exs</code> extension. If the current elixir version is the same as the version set in <code>SPACESHIP_ELIXIR_DEFAULT_VERSION</code>, the elixir section will be hidden.</p>
 <table>
@@ -2136,44 +2174,6 @@ If current directory is write-protected or if current user has not enough rights
 </tr>
 </tbody>
 </table>
-<h3 id="pyenv-pyenv">Pyenv (<code>pyenv</code>)</h3>
-<p>pyenv section is shown only in directories that contain <code>requirements.txt</code> or any other file with <code>.py</code> extension.</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">Variable</th>
-<th style="text-align:center">Default</th>
-<th>Meaning</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left"><code>SPACESHIP_PYENV_SHOW</code></td>
-<td style="text-align:center"><code>true</code></td>
-<td>Show current Pyenv version or not</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>SPACESHIP_PYENV_PREFIX</code></td>
-<td style="text-align:center"><code>$SPACESHIP_PROMPT_DEFAULT_PREFIX</code></td>
-<td>Prefix before the pyenv section</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>SPACESHIP_PYENV_SUFFIX</code></td>
-<td style="text-align:center"><code>$SPACESHIP_PROMPT_DEFAULT_SUFFIX</code></td>
-<td>Suffix after the pyenv section</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>SPACESHIP_PYENV_SYMBOL</code></td>
-<td style="text-align:center"><code>&#x1F40D;&#xB7;</code></td>
-<td>Character to be shown before Pyenv version</td>
-</tr>
-<tr>
-<td style="text-align:left"><code>SPACESHIP_PYENV_COLOR</code></td>
-<td style="text-align:center"><code>yellow</code></td>
-<td>Color of Pyenv section</td>
-</tr>
-</tbody>
-</table>
 <h3 id="net-dotnet">.NET (<code>dotnet</code>)</h3>
 <p>.NET section is shown only in directories that contains a <code>project.json</code> or <code>global.json</code> file, or a file with one of these extensions: <code>.csproj</code>, <code>.xproj</code> or <code>.sln</code>.</p>
 <table>
@@ -2595,7 +2595,7 @@ If current directory is write-protected or if current user has not enough rights
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-10-31T16:45:36.666Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-31T16:47:33.394Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Options","level":"1.2","depth":1,"next":{"title":"Order","level":"1.2.1","depth":2,"anchor":"#order","path":"docs/Options.md","ref":"docs/Options.md#order","articles":[]},"previous":{"title":"Home","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["edit-link","github","github-buttons","anchorjs"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"github":{"url":"https://github.com/denysdovhan/spaceship-prompt/"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"github-buttons":{"buttons":[{"user":"denysdovhan","repo":"spaceship-prompt","type":"star","size":"small","count":true}]},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"edit-link":{"label":"Edit This Page","base":"https://github.com/denysdovhan/spaceship-prompt/tree/master"},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchorjs":{}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Spaceship ZSH","gitbook":"3.x.x"},"file":{"path":"docs/Options.md","mtime":"2018-11-23T12:32:14.471Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-11-23T12:34:06.795Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
