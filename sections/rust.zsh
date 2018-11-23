@@ -28,7 +28,7 @@ spaceship_rust() {
 
   spaceship::exists rustc || return
 
-  local rust_version=$(rustc --version | cut -d' ' -f2)
+  local rust_version=${$(rustc --version 2>&1)[2]}
 
   if [[ $SPACESHIP_RUST_VERBOSE_VERSION == false ]]; then
   	local rust_version=$(echo $rust_version | cut -d'-' -f1) # Cut off -suffixes from version. "v1.30.0-beta.11" or "v1.30.0-nightly"
