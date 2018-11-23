@@ -267,7 +267,7 @@ Ruby section is shown only in directories that contain `Gemfile`, or `Rakefile`,
 
 ### Python (`python`)
 
-Python version is shown inside directories that contain files `requirements.txt`, `Pipfile` or any file with `.py` extension and either inside virtual environment of when configured as `always` show.
+Python version is shown only inside directories that contain relevant files like `requirements.txt`, `Pipfile` or any other file with `.py` extension with virtual environment activated or if section is configured to be displayed `always` with relevant files.
 
 | Variable | Default | Meaning |
 | :------- | :-----: | ------- |
