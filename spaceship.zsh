@@ -49,6 +49,7 @@ if [ -z "$SPACESHIP_PROMPT_ORDER" ]; then
     package       # Package version
     node          # Node.js section
     ruby          # Ruby section
+    python        # Python section
     elixir        # Elixir section
     xcode         # Xcode section
     swift         # Swift section
@@ -61,7 +62,6 @@ if [ -z "$SPACESHIP_PROMPT_ORDER" ]; then
     aws           # Amazon Web Services section
     venv          # virtualenv section
     conda         # conda virtualenv section
-    python        # Python section
     dotnet        # .NET section
     ember         # Ember.js section
     kubecontext   # Kubectl context section
