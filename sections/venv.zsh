@@ -34,7 +34,7 @@ spaceship_venv() {
   then
     venv="$VIRTUAL_ENV:h:t"
   else
-    venv="${${(@s|-|)VIRTUAL_ENV:t}[1]}"
+    venv="${${VIRTUAL_ENV:t}%-*}"
   fi
 
 spaceship::section \
