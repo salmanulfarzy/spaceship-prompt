@@ -20,13 +20,17 @@ SPACESHIP_VENV_COLOR="${SPACESHIP_VENV_COLOR="blue"}"
 # Section
 # ------------------------------------------------------------------------------
 
-# Show current virtual environment (Python).
-spaceship_venv() {
+
+spaceship_async_job_load_venv() {
   [[ $SPACESHIP_VENV_SHOW == false ]] && return
 
   # Check if the current directory running via Virtualenv
   [ -n "$VIRTUAL_ENV" ] || return
 
+  async_job spaceship spaceship_async_job_venv
+}
+
+spaceship_async_job_venv() {
   local 'venv'
 
   if [[ "${SPACESHIP_VENV_GENERIC_NAMES[(i)$VIRTUAL_ENV:t]}" -le \
@@ -37,9 +41,18 @@ spaceship_venv() {
     venv="${${VIRTUAL_ENV:t}%-*}"
   fi
 
-spaceship::section \
+  echo $venv
+}
+
+# Show current virtual environment (Python).
+spaceship_venv() {
+  local async_result="${SPACESHIP_ASYNC_RESULTS[spaceship_async_job_venv]}"
+
+  [[ -z $async_result ]] && return
+
+  spaceship::section \
     "$SPACESHIP_VENV_COLOR" \
     "$SPACESHIP_VENV_PREFIX" \
-    "${SPACESHIP_VENV_SYMBOL}${venv}" \
+    "${SPACESHIP_VENV_SYMBOL}${async_result}" \
     "$SPACESHIP_VENV_SUFFIX"
 }
