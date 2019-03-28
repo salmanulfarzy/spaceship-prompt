@@ -1,6 +1,8 @@
 ---
-name: 🐛 Bug Report
-about: If something isn't working as expected 🤔.
+name: "\U0001F41B Bug Report"
+about: "If something isn't working as expected \U0001F914."
+labels: bug
+
 ---
 
 <!--
@@ -38,4 +40,3 @@ Provide a screenshot that shows your issue
 
 **Possible Solution**
 <!--- Only if you have suggestions on a fix/reason for the bug -->
-
