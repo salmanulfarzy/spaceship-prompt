@@ -44,6 +44,7 @@ spaceship_precmd_hook() {
   if [[ -z "$SPACESHIP_ASYNC_INITIALIZED" ]]; then
     async_start_worker spaceship -u -n
     async_register_callback spaceship spaceship_async_callback
+    async_worker_eval spaceship 'setopt extendedglob'
     typeset -g SPACESHIP_ASYNC_INITIALIZED=1
   fi
 
@@ -57,8 +58,9 @@ spaceship_precmd_hook() {
   # Should it add a new line before the prompt?
   [[ $SPACESHIP_PROMPT_ADD_NEWLINE == true ]] && echo -n "$NEWLINE"
 
-	# Switch async worker to the current directory
+  # Switch async worker to the current directory and set environment variables
   async_worker_eval spaceship "cd '$PWD'"
+  async_worker_eval spaceship "export PATH='$PATH'"
 
   # Draw initial prompt (no async jobs started yet)
   PROMPT=$(spaceship::compose_prompt $SPACESHIP_PROMPT_ORDER)
